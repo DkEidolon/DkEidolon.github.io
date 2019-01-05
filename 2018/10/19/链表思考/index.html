@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>链表思考 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="链表思考链表题能充分的显示出做题者的思维能力，在这就总结一些网络上看到的链表题及个人解法。 一、判断单链表是否有环。　　一个单链表若是有环，则无法从头遍历到尾，可以设置不同步的两个指针从头开始遍历，若相遇则代表有环。比如P1=P1-&amp;gt;next，p2=p2-&amp;gt;next-&amp;gt;next。在拜读某位大牛的博客时，看到一篇文章。可以参考。http://ostermiller.org/find">
+<meta name="keywords" content="数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="链表思考">
+<meta property="og:url" content="http://yoursite.com/2018/10/19/链表思考/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="链表思考链表题能充分的显示出做题者的思维能力，在这就总结一些网络上看到的链表题及个人解法。 一、判断单链表是否有环。　　一个单链表若是有环，则无法从头遍历到尾，可以设置不同步的两个指针从头开始遍历，若相遇则代表有环。比如P1=P1-&amp;gt;next，p2=p2-&amp;gt;next-&amp;gt;next。在拜读某位大牛的博客时，看到一篇文章。可以参考。http://ostermiller.org/find">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/链表思考/链表思考/1.png">
+<meta property="og:image" content="http://yoursite.com/2018/10/19/链表思考/链表思考/2.png">
+<meta property="og:updated_time" content="2019-01-05T07:12:03.040Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="链表思考">
+<meta name="twitter:description" content="链表思考链表题能充分的显示出做题者的思维能力，在这就总结一些网络上看到的链表题及个人解法。 一、判断单链表是否有环。　　一个单链表若是有环，则无法从头遍历到尾，可以设置不同步的两个指针从头开始遍历，若相遇则代表有环。比如P1=P1-&amp;gt;next，p2=p2-&amp;gt;next-&amp;gt;next。在拜读某位大牛的博客时，看到一篇文章。可以参考。http://ostermiller.org/find">
+<meta name="twitter:image" content="http://yoursite.com/2018/10/19/链表思考/链表思考/1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-链表思考" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/19/链表思考/" class="article-date">
+  <time datetime="2018-10-19T08:06:40.000Z" itemprop="datePublished">2018-10-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习之路/">学习之路</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      链表思考
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="链表思考"><a href="#链表思考" class="headerlink" title="链表思考"></a>链表思考</h1><p>链表题能充分的显示出做题者的思维能力，在这就总结一些网络上看到的链表题及个人解法。</p>
+<h3 id="一、判断单链表是否有环。"><a href="#一、判断单链表是否有环。" class="headerlink" title="一、判断单链表是否有环。"></a>一、判断单链表是否有环。</h3><p>　　一个单链表若是有环，则无法从头遍历到尾，可以设置不同步的两个指针从头开始遍历，若相遇则代表有环。比如P1=P1-&gt;next，p2=p2-&gt;next-&gt;next。在拜读某位大牛的博客时，看到一篇文章。可以参考。<br><a href="http://ostermiller.org/find_loop_singly_linked_list.html" target="_blank" rel="noopener">http://ostermiller.org/find_loop_singly_linked_list.html</a></p>
+<h3 id="二、判断两个单链表是否有交点，有的话，找出交点。"><a href="#二、判断两个单链表是否有交点，有的话，找出交点。" class="headerlink" title="二、判断两个单链表是否有交点，有的话，找出交点。"></a>二、判断两个单链表是否有交点，有的话，找出交点。</h3><p>　　判断是否相交有很多方法，想的最简单的就是两个链表如果相交，链表尾肯定是一样的，那么同时遍历到尾，看是否相等就好了。或者利用上面的办法，将其中一个链表的尾只想另一链表头，判断是否有环。画个图理解一下。<img src="链表思考/1.png" alt="图例"></p>
+<p>　　两个链表，表头一样，那么直接找到了交点。如果不一样，假设第一个链表长度为len1，第二个为len2，然后找出长度较长的，让长度较长的链表指针向后移动|len1 - len2| (len1-len2的绝对值)，然后在开始遍历两个链表，判断节点是否相同即可。</p>
+<h3 id="三、判断两个单链表是否带环，是的话，找出交点。"><a href="#三、判断两个单链表是否带环，是的话，找出交点。" class="headerlink" title="三、判断两个单链表是否带环，是的话，找出交点。"></a>三、判断两个单链表是否带环，是的话，找出交点。</h3><p>　　这是上述两题的合集，可以先用异步的办法判断是否有环。交点ｐ在环中，然后把环断开，P1=P,P2=P-&gt;next，p-&gt;next=NULL.现在有两个单链表了，一个从head开始，一个从P2开始。利用第二题的办法就能搞定了。</p>
+<h3 id="四、删除单链表的某节点"><a href="#四、删除单链表的某节点" class="headerlink" title="四、删除单链表的某节点"></a>四、删除单链表的某节点</h3><p>　　删除节点不是很简单吗，遍历链表，建立一个循环来找到这个节点r，每次没找到都保存一下上一节点pre，删除的时候只需要pre-&gt;next=r-&gt;next,然后r-&gt;next=NULL,free（r），r=NULL。</p>
+<p>但是这一点都不cool，还要找到上一节点，还得遍历，还得有头节点。很复杂。那么，我们可不可以鸠占鹊巢呢，我们有这个节点p，有这个节点p的下一个节点p-&gt;next,那么，我们把p-&gt;next的数据全部拷贝到p，然后p-&gt;next=p-&gt;next-&gt;next,再干掉p-&gt;next。成功实现功能。<br><img src="链表思考/2.png" alt="图例"></p>
+<h3 id="五，在单链表的某节点前插入节点"><a href="#五，在单链表的某节点前插入节点" class="headerlink" title="五，在单链表的某节点前插入节点"></a>五，在单链表的某节点前插入节点</h3><p>　　常规办法，遍历找到某节点的前节点，然后前节点next指向新节点，新节点next指向某节点。</p>
+<p>　　cool点的办法，鸠占鹊巢式，某节点Ｐ后面插入一个新节点，然后把Ｐ的数据复制到新节点中，再给Ｐ赋值（原本新节点的值）。</p>
+<h3 id="六、删除单链表的倒数第k个节点。"><a href="#六、删除单链表的倒数第k个节点。" class="headerlink" title="六、删除单链表的倒数第ｋ个节点。"></a>六、删除单链表的倒数第ｋ个节点。</h3><p>　　p1指向头节点，P2指向头节点后的第k个节点，（写个for循环，p2从头开始，每次循环指向下一个），两个p同时向后步进，直到p2到链表尾。 此时p1就是要删除的节点了，再鸠占鹊巢式删除p1,收工。</p>
+<h3 id="七、链表排序"><a href="#七、链表排序" class="headerlink" title="七、链表排序"></a>七、链表排序</h3><p>　　简单介绍一个排序，快速排序。其主要思想是找一个标杆，这个标杆左边的数据都比它小，右边的都比它大。此时左右两边又成了新的无序链表，对左右两边的链表再递归调用这个函数。实现功能。</p>
+<pre><code>//=============快速排序====================
+
+//交换节点
+void swap(node * a, node * b)
+{
+    int temp = a -&gt; val;
+    a -&gt; val = b -&gt; val;
+    b -&gt; val = temp;
+}
+
+//求中间点
+node * partion(node * start, node * end)
+{
+    if(start == end || start -&gt; next == end)
+    {   
+        return start;
+    }   
+    //取第一个元素作为基准元素
+    node * p = start, * q = start, * refer = start;
+    //从start开始向后进行一次遍历(因为是单链表，无法按从左右向中间遍历的方法)
+    while(p != end)
+    {   
+        if(q -&gt; val &lt; refer -&gt; val) 
+        {   
+            p =  p -&gt; next;
+            swap(p, q); 
+        }   
+        q = q -&gt; next;
+    }   
+    swap(p, refer);
+    return p;
+}
+//递归
+void quick_sort(node * start, node * end)
+{
+    if(start == end || start -&gt; next == end)
+    {   
+        return;
+    }   
+    node * mid = partion(start, end);
+    quick_sort(start, mid);
+    quick_sort(mid -&gt; next, end);
+}
+
+void quickSort(list mylist)
+{
+    if((mylist -&gt; next == NULL) || (mylist -&gt; next -&gt; next == NULL))
+    {
+        return;
+    }
+    node * start = mylist -&gt; next;
+    node * end = NULL;
+    quick_sort(start, end);
+}
+</code></pre><h3 id="八、链表倒置"><a href="#八、链表倒置" class="headerlink" title="八、链表倒置"></a>八、链表倒置</h3><p>很不幸，在写这篇博客前，并没有好好整理关于链表的知识，导致笔试的时候遇见这题，思维异常的混乱，虽然成功的完成了，但是很多细节没有注意，涂改过多，描述也不清晰，导致了笔试的失败（思路差，描述乱，涂改多，以后尽量的把思路写草稿纸上再填写到答题纸上）。好吧，废话不多说，开始介绍第八个问题，链表倒置。</p>
+<p>　　一开始，我的思路是，建立一个循环，循环的内容是：每次找到原链表的倒数第一个数和倒数第二个数，把它链接到一个新的链表上，然后把原链表的最后一个数删除。直到原链表空。</p>
+<p>　　这样想一点都不cool，而且会给人一种很差劲的感觉，并且，实现起来比较复杂。有一个很好的思想，叫递归。脑子里有一个递归的概念，重复利用。用的时候想成就只有两个数，要做的事就是把这第一个数node，插到最后一个数temp的后面，因为只有两个数，所以，temp=node-&gt;next，所以要做的事就是，temp-&gt;next=node,node-&gt;next=NULL。递归调用这个函数。</p>
+<pre><code>    ListNode* reverse(ListNode *node)
+{
+    if(node==NULL)
+    {
+        return node;
+    }
+    if(node-&gt;next==NULL)//跳出
+    {
+        return node;
+    }
+    ListNode *preNode=reverse(node-&gt;next);
+
+    ListNode *temp=node-&gt;next;
+
+    temp-&gt;next=node;
+
+    node-&gt;next=NULL;
+
+    return preNode;
+}
+</code></pre><p>其实不递归也能很cool，写一个循环，循环里prev是node的前驱（第一个node没前驱，所以prev的初值为NULL），每次用temp保存node的后继，然后让node的next指向prev（实现了倒序），此时，这个新的关系成为了新的一个链表，与原链表无关。prev成为下一个node的前驱，也就是现在的node，temp成为新的node。继续循环，直到尾节点结束。</p>
+<pre><code>ListNode *Reverse(ListNode *node)
+{
+    if(node==NULL)
+    {
+      return node;
+    }
+    ListNode *prev=NULL;
+    while(node-&gt;next!=NULL)
+    {
+      ListNode *tmp=node-&gt;next;
+      node-&gt;next=prev;
+      prev=node;
+      node=tmp;
+    }
+}
+</code></pre><h3 id="九、有序列表合并"><a href="#九、有序列表合并" class="headerlink" title="九、有序列表合并"></a>九、有序列表合并</h3><p>　　常规思路，肯定是慢慢比较咯，取出链表ａ的值，再取出ｂ的值，比较一下，小的插入到新的链表中。很简单嘛，ｃｏｏｌ一点，这种重复的东西，可以递归嘛。</p>
+<p>我们要做的事情是什么呢，找到ａｂ链表中更小的那个数，赋值给一个新的节点result，并返回这个节点。result节点的下一个指向下一个新节点，也就是这个递归函数了，知道ab其中一个为空。</p>
+<pre><code>struct node* result = NULL;
+
+    if(a == NULL)
+        return (b);
+    else if(b == NULL)
+        return (a);
+
+    if(a-&gt;data &lt;= b-&gt;data)
+    {
+        result = a;
+        result-&gt;next = SortedMerge(a-&gt;next, b);
+    }
+    else
+    {
+        result = b;
+        result-&gt;next = SortedMerge(a, b-&gt;next);
+    }
+    return (result);
+</code></pre><h3 id="十、找出链表最中间的数"><a href="#十、找出链表最中间的数" class="headerlink" title="十、找出链表最中间的数"></a>十、找出链表最中间的数</h3><p>龟兔赛跑，兔速度是龟的两倍，当兔跑到终点时，龟就在最中间啦。</p>
+<blockquote>
+<p>p1=p2=head;<br>p1=p1-&gt;next;p2=p2-&gt;next-&gt;next;</p>
+</blockquote>
+<p>文终，希望博主下次看自己博客的时候已经拿到offer了吧。加油~</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/19/链表思考/" data-id="cjqj4s8ww0013rsutbkysjmuk" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/10/25/字符串操作/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          字符串操作
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/10/15/linux安装arm-linux-gcc交叉编译环境/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">linux安装arm-linux-gcc交叉编译环境</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习之路/">学习之路</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随记/">随记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ARM/">ARM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字符串操作/">字符串操作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构/">数据结构</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电脑随记/">电脑随记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔试常见问题汇总/">笔试常见问题汇总</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/进程与线程/">进程与线程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ARM/" style="font-size: 10px;">ARM</a> <a href="/tags/c/" style="font-size: 10px;">c++</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/字符串操作/" style="font-size: 10px;">字符串操作</a> <a href="/tags/数据结构/" style="font-size: 10px;">数据结构</a> <a href="/tags/电脑随记/" style="font-size: 10px;">电脑随记</a> <a href="/tags/笔试常见问题汇总/" style="font-size: 10px;">笔试常见问题汇总</a> <a href="/tags/进程与线程/" style="font-size: 20px;">进程与线程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/04/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/04/git-hexo搭建前传/">git-hexo搭建前传</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/15/自电脑重装所需步骤/">自电脑重装所需步骤</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/04/UART-IIC-SPI了解及思考/">UART,IIC,SPI了解及思考</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/04/简易的hexo搭建二/">简易hexo的搭建　　（二）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

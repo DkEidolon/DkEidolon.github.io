@@ -5,19 +5,20 @@
   
 
   
-  <title>Hello World | Hexo</title>
+  <title>学习之路 —— 进程与线程　　（一） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="学习之路 —— 进程与线程一、进程和线程关系及区别1、定义　　进程是独立功能的程序关于某个数据集合上的一次运行活动，进程是系统进行资源分配和调度的一个独立单位。　　线程是进程中的一个实体，是cpu调度和分配的基本单位，但线程基本不拥有系统资源。 2、关系　　　　进程是一个动态的概念，线程是进程中的一部分，一个程序至少有一个进程，一个进程至少有一个线程。两者均能实现并发。 　　 ###3、分别">
+<meta name="keywords" content="进程与线程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/01/04/hello-world/index.html">
+<meta property="og:title" content="学习之路 —— 进程与线程　　（一）">
+<meta property="og:url" content="http://yoursite.com/2018/09/20/学习之路 —— 进程与线程/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="学习之路 —— 进程与线程一、进程和线程关系及区别1、定义　　进程是独立功能的程序关于某个数据集合上的一次运行活动，进程是系统进行资源分配和调度的一个独立单位。　　线程是进程中的一个实体，是cpu调度和分配的基本单位，但线程基本不拥有系统资源。 2、关系　　　　进程是一个动态的概念，线程是进程中的一部分，一个程序至少有一个进程，一个进程至少有一个线程。两者均能实现并发。 　　 ###3、分别">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-04T15:40:45.480Z">
+<meta property="og:updated_time" content="2019-01-05T07:12:03.030Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="学习之路 —— 进程与线程　　（一）">
+<meta name="twitter:description" content="学习之路 —— 进程与线程一、进程和线程关系及区别1、定义　　进程是独立功能的程序关于某个数据集合上的一次运行活动，进程是系统进行资源分配和调度的一个独立单位。　　线程是进程中的一个实体，是cpu调度和分配的基本单位，但线程基本不拥有系统资源。 2、关系　　　　进程是一个动态的概念，线程是进程中的一部分，一个程序至少有一个进程，一个进程至少有一个线程。两者均能实现并发。 　　 ###3、分别">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,12 +65,16 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-学习之路 —— 进程与线程" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/01/04/hello-world/" class="article-date">
-  <time datetime="2019-01-04T15:40:45.480Z" itemprop="datePublished">2019-01-04</time>
+    <a href="/2018/09/20/学习之路 —— 进程与线程/" class="article-date">
+  <time datetime="2018-09-20T05:58:20.000Z" itemprop="datePublished">2018-09-20</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习之路/">学习之路</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -78,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      学习之路 —— 进程与线程　　（一）
     </h1>
   
 
@@ -86,32 +91,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="学习之路-——-进程与线程"><a href="#学习之路-——-进程与线程" class="headerlink" title="学习之路 —— 进程与线程"></a>学习之路 —— 进程与线程</h1><h2 id="一、进程和线程关系及区别"><a href="#一、进程和线程关系及区别" class="headerlink" title="一、进程和线程关系及区别"></a>一、进程和线程关系及区别</h2><h3 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h3><p>　　进程是<strong>独立功能</strong>的程序关于某个<strong>数据集合</strong>上的一次运行活动，进程是系统进行资源分配和调度的一个独立单位。<br>　　线程是进程中的一个实体，是cpu调度和分配的基本单位，但线程基本不拥有系统资源。</p>
+<h3 id="2、关系"><a href="#2、关系" class="headerlink" title="2、关系"></a>2、关系</h3><p>　　<br>　　进程是一个动态的概念，线程是进程中的一部分，<strong>一个程序至少有一个进程，一个进程至少有一个线程</strong>。两者均能实现并发。
+　　</p>
+<p>###3、分别</p>
+<p>　　1）地址空间：线程间共享同一进程的地址空间，进程有自己独立的地址空间。<br>　　2）资源拥有：进程是资源分配和拥有的单位，同进程的线程共享进程资源。　　
+　　</p>
+<h3 id="4、优劣"><a href="#4、优劣" class="headerlink" title="4、优劣"></a>4、优劣</h3><p>　　1）线程是处理器调度的基本单位，其划分的尺度小于进程，使得多线程程序的并发性高。</p>
+<p>　　2）进程在执行过程中拥有独立的内存单元，而多个线程之间共享内存，运行效率高，但由于共享内存，导致线程与线程间互有影响，其中一个线程死亡会导致整个进程死掉，所以多进程程序比多线程程序健壮，但进程切换耗费资源大，效益低。</p>
+<p>　　3）线程在执行过程中与进程还是有区别的。每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。</p>
+<p>　　4）从逻辑角度来看，多线程的意义在于一个应用程序中，有多个执行部分可以同时执行。但操作系统并没有将多个线程看做多个独立的应用，来实现进程的调度和管理以及资源分配。这就是进程和线程的重要区别。</p>
+<p>　　5）线程和进程在使用上各有优缺点：线程执行开销小，但不利于资源的管理和保护；而进程正相反。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/04/hello-world/" data-id="cjqj4s8vi0005rsutt8ui14dq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/09/20/学习之路 —— 进程与线程/" data-id="cjqj4s8vo000brsutlzhv5vwn" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/进程与线程/">进程与线程</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
+    <a href="/2018/09/28/学习之路——进程间通信/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          学习之路——进程与线程（三）
+        
+      </div>
+    </a>
   
-    <a href="/2019/01/04/git-hexo搭建前传/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2018/09/20/学习之路——进程/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">git-hexo搭建前传</div>
+      <div class="article-nav-title">学习之路 —— 进程与线程　　（二）</div>
     </a>
   
 </nav>
